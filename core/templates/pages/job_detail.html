@@ -1,0 +1,132 @@
+{% extends 'base.html' %} {% block SEO %}
+<title>{{job.title}} | Tech Diversity</title>
+<meta name="description" content="{{job.description|truncatewords:12}}" />
+{% endblock SEO %} {% block content %}
+
+<section class="job_detail_heading pt-80 pb-80">
+    <div class="container">
+        <div class="row job_listing align-items-center">
+            <div class="col-sm-8 col-md-12 col-lg-8">
+                <div class="job_block">
+                    <div class="row align-items-center">
+                        <div class="col-sm-4 col-md-12 col-lg-12">
+                            <div class="job_desc">
+                                <!-- <div class="job_img">
+                                    <img src="img/facebook-logo.png" class="img-fluid" alt="job" />
+                                </div> -->
+                                <div class="media-body">
+                                    <h3 class="mt-0 name">{{job.title}}</h3>
+                                    <ul class="job_info list-unstyled">
+                                        <li><span class="badge badge-pill badge-success">{{job.get_job_type_display}}</span></li>
+                                        <li><i class="fa fa-map-marker"></i> {{job.location}}</li>
+                                        <li><i class="fa fa-clock-o"></i> {{job.created|date}}</li>
+                                        <li><i class="fa fa-briefcase"></i> {{job.company_name}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-12 col-lg-4 text-md-left text-lg-right">
+                <div class="apply_btn">
+                    <a target="_blank" rel="nofollow, noindex" href="{{job.apply_link}}" class="btn btn-warning">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="job_inner pt-80 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-12 col-lg-8">
+                <div class="left_sec">
+                    <h4>job Description</h4>
+                    <div>{{job.description}}</div>
+
+                    <div class="other-options mt-5">
+                        <div class="social-share">
+                            <h5>Share this job</h5>
+                            <a href="" class="facebook"> <i class="fa fa-facebook-f"></i> Facebook </a>
+                            <a href="" class="twitter"> <i class="fa fa-twitter"></i> Twitter </a>
+                            <a href="" class="linkedin"> <i class="fa fa-linkedin"></i> Linkedin </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-12 col-lg-4">
+                <div class="right_sec">
+                    <div class="job_overview">
+                        <h4 class="mt-0">Job Overview</h4>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <div class="media">
+                                    <i class="fa fa-briefcase mr-4"></i>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Date Posted:</h5>
+                                        {{job.created|date}}
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="media">
+                                    <i class="fa fa-hourglass-1 mr-4"></i>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Expiration date:</h5>
+                                        {{job.deadline|date}}
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="media">
+                                    <i class="fa fa-map-marker mr-4"></i>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Location:</h5>
+                                        {{job.location}}
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="media">
+                                    <i class="fa fa-user mr-4"></i>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Job Title:</h5>
+                                        {{job.title}}
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="media">
+                                    <i class="fa fa-clock-o mr-4"></i>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Hours:</h5>
+                                        {{job.hours}}h / week
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <i class="fa fa-usd mr-4"></i>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Salery Range:</h5>
+                                        ${{job.salary_min}} - ${{job.salary_max}}
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,42 @@
+{% load custom_tags %} {% if is_paginated %} {% get_proper_elided_page_range paginator page_obj.number as page_range %}
+
+<div class="row justify-content-center">
+    <div class="col-sm-6 text-center justify-content-center d-flex">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a href="?page={{ page_obj.previous_page_number }}" class="page-link">Previous</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a href="#" class="page-link">Previous</a>
+                </li>
+                {% endif %}
+                <!-- prettier ignore -->
+                {% for i in page_range %} {% if page_obj.number == i %}
+                <li class="page-item active">
+                    <a href="#" class="page-link">{{i}}</a>
+                </li>
+                {% else %} {% if i == paginator.ELLIPSIS %}
+                <li class="page-item">
+                    <a href="#" class="page-link">{{ paginator.ELLIPSIS }}</a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                    <a href="?page={{ i }}" class="page-link">{{ i }}</a>
+                </li>
+                {% endif %} {% endif %} {% endfor %} {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a href="?page={{ page_obj.next_page_number }}" class="page-link">Next</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a href="#" class="page-link">Next</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endif %}

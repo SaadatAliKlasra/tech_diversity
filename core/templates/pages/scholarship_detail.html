@@ -1,0 +1,76 @@
+{% extends 'base.html' %} {% load static humanize %}
+
+{% block SEO %}
+  <title>{{scholarship.title}} | Tech Diversity</title>
+  <meta name="description" content="{{scholarship.description|truncatewords:12}}" />
+{% endblock SEO %}
+
+{% block content %}
+
+<section class="heading_sec pt-80 pb-80" style="background-image: url('{% static "img/scholarshipdetail_header_bg.jpg" %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="heading_info">
+                    <div class="title">
+                        <h2 class="text-white">SCHOLARSHIP</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="scholarship_details pt-80 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-12 col-lg-8">
+                <div class="left_sec">
+                    <div class="title">
+                        <h2>{{scholarship.title}}</h2>
+                    </div>
+                    <div>
+                      {{scholarship.description}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-12 col-lg-4">
+                <div class="right_sec">
+                    <div class="scholarship_box">
+                        <div class="box_head mb-3">
+                            <div class="price">
+                                <h3>{{scholarship.amount|intcomma}}</h3>
+                            </div>
+                            <span class="badge badge-success">Open</span>
+                        </div>
+
+                        <a target="_blank" rel="nofollow, noindex" href="{{scholarship.apply_link}}" class="btn btn-block btn-primary">Apply Now</a>
+
+                        <ul class="list-unstyled mt-3">
+                            <li>
+                                <div class="font-weight-bold">Application Deadline</div>
+                                {{scholarship.deadline|date}}
+                            </li>
+                        </ul>
+                        <hr />
+                        <div class="social-share">
+                            <h5>Share</h5>
+                            <a href="" class="facebook">
+                                <i class="fa fa-facebook-f"></i>
+                            </a>
+                            <a href="" class="twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="" class="linkedin">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

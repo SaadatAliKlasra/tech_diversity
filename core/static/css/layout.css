@@ -1,0 +1,363 @@
+@media only screen and (max-width:767px) {
+    .topbar a {
+        font-size: 14px;
+    }
+    .job_inner .social-share {
+        flex-wrap: wrap;
+    }
+
+    .search_sec .search_info,
+    .job_search_sec .job_search_info,
+    .search_sec2 .search_sec2_info {
+        padding: 30px;
+    }
+
+    .contact_sec .contact_box {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .blog_content ul li {
+        margin-right: 20px;
+        font-size: 14px;
+    }
+
+    .blog_content ul li:last-child {
+        margin: 0;
+    }
+
+    .blog_single .banner_info {
+        top: 0;
+    }
+
+    .blog_single.pb-80 {
+        padding-bottom: 0 !important;
+    }
+
+    .banner_info_img {
+        margin-top: 0;
+    }
+
+    .blog_sec .blog_box {
+        height: auto;
+    }
+
+    .job_listing .job_block ul.job_info {
+        display: block;
+    }
+
+    .job_listing .job_block ul.job_info li {
+        font-size: 14px;
+    }
+
+    p.filter {
+        margin-top: 20px;
+        float: left;
+    }
+
+    .donate_form .selector {
+        margin-bottom: 40px;
+    }
+
+    .benefit_block,
+    .eligible_block {
+        margin-bottom: 20px;
+    }
+
+    .banner_sec h1 {
+        font-size: 32px;
+    }
+
+    .banner_sec {
+        padding: 85px 0;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .banner_sec .banner_shape {
+        display: none;
+    }
+
+    .program_sec .media {
+        margin-bottom: 20px;
+    }
+
+    .program_sec .media img {
+        padding: 10px;
+    }
+
+    .program_sec .media h5 {
+        font-size: 16px;
+    }
+
+    .whatwedo_sec .title p {
+        font-size: 16px;
+    }
+
+    .pb-80 {
+        padding-bottom: 50px;
+    }
+
+    .pt-80 {
+        padding-top: 50px;
+    }
+
+    .search_sec .search_img img {
+        margin-bottom: 20px;
+    }
+
+    .title h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .resource_sec .nav-pills .nav-link {
+        padding: 5px 8px;
+    }
+
+    .search_sec2 img {
+        margin-bottom: 20px;
+    }
+
+    .copyright_sec ul.social_list {
+        float: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    footer .copyright_sec {
+        text-align: center;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        background: #fff;
+        width: 100%;
+        left: 0;
+        top: 80px;
+        padding: 20px;
+    }
+
+    .scholarship_inner .scholarship_shape,
+    .scholarship_inner .scholarship_shape2 {
+        display: none;
+    }
+
+    .scholarship_sec .scholatship_block .btn {
+        padding: 10px 15px;
+    }
+}
+
+@media (min-width: 768px)and (max-width: 991px) {
+
+    .navbar-brand img {
+        width: 130px;
+    }
+
+    .scholarship_img {
+        display: none;
+    }
+
+    .scholarship_inner .scholarship_shape {
+        left: 350px;
+        top: 70px;
+    }
+
+    .scholarship_inner .scholarship_shape2 {
+        left: 0;
+        top: 35px;
+    }
+
+}
+
+
+@media (min-width: 992px)and (max-width: 1024px) {}
+
+
+@media (min-width: 992px) {}
+
+@media only screen and (min-width: 768px) and (max-width:1024px) {
+    .job_inner .right_sec {
+        margin-top: 20px;
+    }
+
+    .blog_content ul li {
+        margin-right: 10px;
+    }
+
+    .banner_info_img {
+        margin-top: 0;
+    }
+
+    .trending_blog .left_story .story_img {
+        margin-bottom: 20px;
+    }
+
+    .trending_blog .right_story .block a {
+        font-size: 16px;
+    }
+
+    .scholarship_sec .scholatship_block .btn {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .our_team .team_block .team_img::before {
+        width: 150px;
+        height: 150px;
+    }
+
+    .navbar .navbar-nav .nav-item .nav-link {
+        font-size: 12px;
+    }
+
+    .navbar-expand-sm .navbar-nav .dropdown-menu {
+        left: -50px;
+    }
+
+    .dropdown-item {
+        font-size: 13px;
+    }
+
+    .banner_sec h1 {
+        font-size: 36px;
+    }
+
+    .banner_sec {
+        padding: 95px 0;
+    }
+
+    .banner_sec .banner_shape {
+        display: none;
+    }
+
+    .program_sec .media h5 {
+        font-size: 14px;
+    }
+
+    .program_sec .media img {
+        padding: 15px;
+    }
+
+    .title h2 {
+        font-size: 32px;
+    }
+
+    .quote_sec h3 {
+        font-size: 26px;
+    }
+
+    .our_team .team_block .team_info h5 {
+        font-size: 20px;
+    }
+
+    .our_team .team_block .quote {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        top: 195px;
+    }
+
+    .our_team .team_block .team_img {
+        margin-bottom: 20px;
+    }
+
+    .copyright_sec ul.social_list {
+        float: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    footer .copyright_sec {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width:1200px) {}
+
+@media only screen and (min-width:1200px) and (max-width:1480px) {}
+
+@media (min-width: 901px)and (max-width: 980px) {}
+
+@media (max-width:992px) {}
+
+@media (max-width:375px) {}
+
+@media (max-width:374px) {}
+
+@media (min-width:376px) and (max-width:480px) {}
+
+@media (min-width:590px) {}
+
+@media only screen and (min-width:1199px) and (max-width:1320px) {}
+
+@media only screen and (min-width:1200px) and (max-width:1280px) {}
+
+@media only screen and (min-width:1300px) and (max-width:1366px) {}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Portrait */
+@media only screen and (max-device-width: 320px) {}
+
+/* Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Portrait */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
+
+/* Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
+
+/* Portrait */
+
+
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+
+
+/* Landscape */
+
+
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {}
+
+/* Portrait */
+
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+
+/* Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {}

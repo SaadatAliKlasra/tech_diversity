@@ -1,0 +1,162 @@
+{% extends 'base.html' %} {% load static humanize crispy_forms_tags %}
+
+{% block SEO %}
+  <title>Scholarship List | Tech Diversity</title>
+  <meta name="description" content="We have got a list of the best scholarship to choose fromß" />
+{% endblock SEO %}
+
+{% block content %}
+
+<section class="heading_sec pt-80 pb-80" style="background-image: url('{% static "img/background-scholarship-search.jpg" %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="heading_info">
+                    <div class="title">
+                        <h2 class="text-white">BROWSE SCHOLARSHIPS</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="scholarship_sec pt-80 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-md-12 col-lg-4">
+                <div class="left_side">
+                    <div class="title">
+                        <h2>Filter By</h2>
+                    </div>
+
+                    <form method="get">
+                        <div class="filter_sec">
+                            <div class="row align-items-center">
+                              <div class="col-sm-12 col-md-6 col-lg-12 mb-3">
+                                <div class="form-group">
+                                  {{filter.form.category|as_crispy_field}}
+                                </div>
+                            </div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-12 mb-3">
+                                    <div class="form-group">
+                                      {{filter.form.amount|as_crispy_field}}
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-5 col-lg-12">
+                                    <div class="row sort_sec align-items-center">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                              {{filter.form.deadline|as_crispy_field}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 text-center">
+                                    <button type="submit" class="btn-primary btn_filter">Filter</butt>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-sm-9 col-md-12 col-lg-8">
+                <div class="right_side">
+                    <div class="row scholarship_listing">
+                        {% for scholarship in object_list %}
+                        <div class="col-sm-12">
+                            <div class="scholatship_block">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-4 col-md-12 col-lg-4">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h5 class="mt-0 name">{{scholarship.title}}</h5>
+                                            </div>
+                                        </div>
+                                        <p class="mt-2">{{scholarship.description|truncatewords:12}}</p>
+                                    </div>
+                                    <div class="col-sm-6 col-md-12 col-lg-6">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="detail_block">
+                                                    <p class="mb-0">Amount</p>
+                                                    <p class="font-weight-bold text-dark"><i class="fa fa-money"></i>{{scholarship.amount|intcomma}}</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="detail_block">
+                                                    <p class="mb-0">Next Deadline</p>
+                                                    <p class="font-weight-bold text-dark"><i class="fa fa-calendar-o"></i> {{scholarship.deadline | date}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 col-md-4 col-lg-2">
+                                        <a href="{{scholarship.get_absolute_url}}" class="btn btn-warning">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% include 'includes/pagination.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq_sec pb-80 pt-80 bg-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center mb-3">
+                <div class="title">
+                    <h2>Frequently asked questions about scholarships</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Are scholarships taxable?</button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample" style="">
+                            <div class="card-body">Since scholarships won through Bold.org are sent directly to the university you are attending, scholarship money is not considered income and therefore is not taxable.</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header px-0" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How to get a full-tuition scholarship?</button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">Full-ride scholarships aren't as easy to come by, but check the scholarships through the school you are planning to attend to see what kind they give. While there are some high-value ones available on Bold.org, such as the BTL Athletes Scholarship, most individual scholarships won't cover your full tuition, so the best option is to apply to many at the same time. Combining them you may be able to cover all of your college costs, but it may not be exactly like the traditional full-ride scholarship you think of. Click here for our list of full-tuition scholarshipsthat cover the average tuition of a 4-year degree.</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header px-0" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How to write a scholarship essay</button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">Writing scholarship essays is a huge part of applying for financial aid. The better essays you write, the more likely you are to win financial aid through scholarships. See Bold.org's Best Tips for Writing a Scholarship Essay for suggestions on how to make your scholarship essays better.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,107 @@
+{% extends 'base.html' %} {% load static crispy_forms_tags %}
+{% block SEO %}
+  <title>Jobs List | Tech Diversity</title>
+  <meta name="description" content="Tons of jobs waiting for your! Find the one that suits you the most." />
+{% endblock SEO %}
+
+{% block content %}
+
+<section class="heading_sec pt-80 pb-80" style="background-image: url(' {% static "img/background-job-search.jpg" %} ')">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="heading_info">
+                    <div class="title">
+                        <h2 class="text-white">Job Search</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="scholarship_sec pt-80 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-md-12 col-lg-4">
+                <div class="left_side">
+                    <div class="title">
+                        <h2>Filter By</h2>
+                    </div>
+                    <form method="get">
+                        <div class="filter_sec">
+                            <div class="row align-items-center">
+                                <div class="col-sm-12 col-md-6 col-lg-12 mb-3">
+                                    <div class="form-group">{{filter.form.title|as_crispy_field}}</div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-12 mb-3">
+                                    <div class="form-group">{{filter.form.location|as_crispy_field}}</div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-12 mb-3">
+                                    <div class="form-group">{{filter.form.category|as_crispy_field}}</div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-12 mb-3">
+                                    <div class="job_type">{{filter.form.job_type|as_crispy_field}}</div>
+                                </div>
+
+                                <div class="col-sm-12 text-center">
+                                    <button type="submit" class="btn-primary btn_filter">Filter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-sm-9 col-md-12 col-lg-8">
+                <div class="right_side">
+                    <div class="row job_listing">
+                        {% for job in object_list %}
+                        <div class="col-sm-12">
+                            <div class="job_block">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-4 col-md-12 col-lg-12">
+                                        <div class="job_desc">
+                                            {% comment %}
+                                            <div class="job_img">
+                                                <img src="{% static 'img/facebook-logo.png' %}" class="img-fluid" alt="job" />
+                                            </div>
+                                            {% endcomment %}
+
+                                            <div class="media-body">
+                                                <h5 class="mt-0 name">{{job.title}}</h5>
+                                                <ul class="job_info list-unstyled">
+                                                    <li><span class="badge badge-pill badge-success">{{job.get_job_type_display}}</span></li>
+                                                    <li><i class="fa fa-map-marker"></i> {{job.location}}</li>
+                                                    <li><i class="fa fa-clock-o"></i> {{job.created | date}}</li>
+                                                    <li><i class="fa fa-briefcase"></i> {{job.company_name}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="info">{{job.description|truncatewords:12}}</p>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <a href="{{job.get_absolute_url}}" class="btn-warning"> More Detail</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% include 'includes/pagination.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

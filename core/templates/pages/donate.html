@@ -1,0 +1,58 @@
+{% extends 'base.html' %}{% load static %}
+
+{% block SEO %}
+  <title>Donate | Tech Diversity</title>
+  <meta name="description" content="Please donate us because we are a non-profit organization." />
+{% endblock SEO %}
+{% block content %}
+
+<section class="heading_sec pt-80 pb-80" style="background-image: url('{% static "img/background-donate.jpg" %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="heading_info">
+                    <div class="title">
+                        <h2 class="text-white">DONATE</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="donate_sec pt-80 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-12 col-lg-7">
+                <div class="left_info">
+                    <p>At Tech Diversity Project, we believe that fostering diversity and inclusivity in the technology industry is essential for innovation, creativity, and growth. Your generous donation will help us continue to provide comprehensive resources, support, and opportunities to underrepresented individuals looking to pursue careers in technology.At Tech Diversity Project, we believe that fostering diversity and inclusivity in the technology industry is essential for innovation, creativity, and growth. Your generous donation will help us continue to provide comprehensive resources, support, and opportunities to underrepresented individuals looking to pursue careers in technology.</p>
+
+                    <h5 class="font-weight-bold">How Your Donation Helps:</h5>
+                    <ul class="check_list list-unstyled">
+                        <li>
+                            <span>Scholarships and Grants:</span>
+                            Your contributions will enable us to offer scholarships and grants to underrepresented students, giving them the financial assistance they need to pursue their education in technology-related fields.
+                        </li>
+
+                        <li>
+                            <span>Mentorship and Networking:</span>
+                            Donations support our mentorship programs that connect underrepresented individuals with seasoned professionals in the tech industry, helping them build meaningful connections, learn from the best, and grow their careers.
+                        </li>
+
+                        <li>
+                            <span>Resource Development:</span>
+                            Your donation will enable us to create valuable resources, such as informative articles, videos, and webinars, to educate and inspire underrepresented individuals in their journey to become tech professionals.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-12 col-lg-5 text-center">
+                <div class="donate_form sticky-top">
+                    <iframe src="https://donorbox.org/embed/tech-diversity-project-donations" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height: none !important"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

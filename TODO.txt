@@ -1,0 +1,10 @@
+DONE: change the date format to month/day/year in filter and the same for admin panel
+DONE: work with dollar sign in amount field in job and scholarship
+DONE: fix import
+DONE: show salery range to frontend in job detail page in blue box area
+DONE: change view detail to view in listing page
+DONE: remove Related Jobs from job detail page
+
+
+REQUIRE MORE RESOURSEC: fix share buttons
+

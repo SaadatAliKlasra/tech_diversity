@@ -1,0 +1,114 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block SEO %}
+  <title>Partner | Tech Diversity</title>
+  <meta name="description" content="There are couple of companies who did partnership with us to help us out for a good cause." />
+{% endblock SEO %}
+
+{% block content %}
+
+<section class="heading_sec pt-80 pb-80" style="background-image: url('{% static "img/background-partnership.jpg" %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="heading_info">
+                    <div class="title">
+                        <h2 class="text-white">PARTNERS</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="partner_sec pt-80 pb-80">
+    <div class="shape_1">
+        <img src="{% static 'img/about-1.png' %}" class="img-fluid" alt="shape" />
+    </div>
+    <div class="shape_2">
+        <img src="{% static 'img/about-2.png' %}" class="img-fluid" alt="shape" />
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p>We offer various sponsorship packages tailored to meet your organization's goals and demonstrate your commitment to diversity and inclusion in the tech industry. By partnering with us, you will directly support our initiatives to:</p>
+                <ul class="list-unstyled check_list">
+                    <li>Provide scholarships and financial aid to underrepresented students pursuing degrees in technology fields</li>
+                    <li>Organize workshops, webinars, and mentorship programs designed to develop skills and provide networking opportunities for underrepresented individuals in tech.</li>
+                    <li>Create and maintain an online platform that offers resources, guidance, and support for diverse tech professionals at all stages of their careers.</li>
+                    <li>Partner with schools and educational institutions to promote computer science and technology education in underserved communities.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sponsorship_benefits bg-light pt-80 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="title">
+                    <h2>Sponsorship Benefits</h2>
+                    <p>By sponsoring our organization, you will enjoy the following benefits:</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <ul class="check_list list-unstyled">
+                    <li>Brand Visibility: Showcase your organization's commitment to diversity and inclusion by being featured on our website, social media platforms, and event materials.</li>
+
+                    <li>Networking Opportunities: Connect with a diverse pool of talent, industry experts, and other partner organizations at our events and workshops.</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6">
+                <ul class="check_list list-unstyled">
+                    <li>Talent Recruitment: Gain access to a broad network of diverse and talented professionals interested in working for organizations that value diversity and inclusion.</li>
+
+                    <li>Community Impact: Contribute to the growth and success of underrepresented individuals in the tech industry, driving positive change in the sector.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="become_sponsor bg-secondary pt-80 pb-80">
+    <div class="shape_1">
+        <img src="{% static 'img/bg-layered.png' %}" class="img-fluid" alt="shape" />
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center mb-3">
+                <div class="title">
+                    <h2>How to Become a Sponsor</h2>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <p>If you are interested in partnering with us and supporting our mission, please follow these steps:</p>
+                <ul class="list-unstyled check_list">
+                    <li>Review our sponsorship packages and select the one that best aligns with your organization's goals.</li>
+
+                    <li>Complete our online sponsorship application form, providing your organization's details and the sponsorship package you wish to select.</li>
+
+                    <li>Our team will review your application and contact you to discuss the next steps in the partnership process.</li>
+
+                    <li>Join us in our journey to make the tech industry a more diverse and inclusive space. Together, we can create a brighter future for everyone.</li>
+
+                    <li>Review our sponsorship packages and select the one that best aligns with your organization's goals.</li>
+
+                    <li>Complete our online sponsorship application form, providing your organization's details and the sponsorship package you wish to select.</li>
+
+                    <li>Our team will review your application and contact you to discuss the next steps in the partnership process.</li>
+
+                    <li>Join us in our journey to make the tech industry a more diverse and inclusive space. Together, we can create a brighter future for everyone.</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-12 text-center mt-3">
+                <a href="https://techdiversitysponsor.paperform.co/" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">BECOME SPONSOR NOW</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

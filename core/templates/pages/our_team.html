@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% load static %} {% block SEO %}
+<title>Our Team | Tech Diversity</title>
+<meta name="description" content="We are a team of talented people who are passionate about helping people." />
+{% endblock SEO %} {% block content %}
+
+<section class="heading_sec pt-80 pb-80" style="background-image: url('{% static "img/background-ourteam.jpg" %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="heading_info">
+                    <div class="title">
+                        <h2 class="text-white">MEET OUR FOUNDERS</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our_team team1 bg-secondary pt-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row team_block align-items-center">
+                    <div class="col-sm-4">
+                        <div class="team_img">
+                            <img src="{% static 'img/team1.png' %}" class="img-fluid" alt="testiminial" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8">
+                        <div class="team_info">
+                            <h3>Tariehk Geter</h3>
+                            <h4>CEO/Co-Founder</h4>
+                            <p>Tariehk Geter is a seasoned business owner and co-founder of Omnistar Affiliate Software which gives businesses the opportunity to set up and manage their own affiliate and customer referral programs. With over 23 years of experience managing a minority owned technology business, Tariehk is very familiar with the fact that minorities are underrepresented in the tech industry. His knowledge of this is what drove him to start the Tech Diversity Project so that he can assist other minorities in tech that do not have access to the same resources and information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="our_team team2 bg-warning pt-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row team_block align-items-center">
+                    <div class="col-sm-8">
+                        <div class="team_info">
+                            <h3>Arlen Robinson</h3>
+                            <h4>COO/Co-Founder</h4>
+                            <p>Arlen Robinson is the co-founder of Omnistar Affiliate Software and the Tech Diversity project. During his more than 20 years in the tech industry he has witnessed first hand the struggles that minorities face on a day to day basis. His knowledge of the everyday struggles is what drove him to work with his long time business partner Tariehk to start the Tech diversity project. It is their mission to help to level the playing field so that the numbers of minorities in tech can increase with each generation.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="team_img">
+                            <img src="{% static 'img/team2.png' %}" class="img-fluid" alt="testiminial" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

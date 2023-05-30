@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block SEO %}
+  <title>Contact Us | Tech Diversity</title>
+  <meta name="description" content="Please contact us if you have any questions regarding our website. We will be more than happy to assist you." />
+{% endblock SEO %}
+
+{% block content %}
+<section class="heading_sec pt-80 pb-80" style="background-image: url('{% static "img/background-contact.jpg" %}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="heading_info">
+                    <div class="title">
+                        <h2 class="text-white">CONTACT</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact_sec pt-80 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="paper_form">
+                    <div class="title">
+                        <!-- <h2 class="text-white">Let's talk?</h2> -->
+                    </div>
+                    <div data-paperform-id="techdiversityproj"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-5">
+            <div class="col-sm-12 text-center">
+                <div class="title">
+                    <h2 class="">Need Help?</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <!-- <h3>Need Help?</h3> -->
+
+            <div class="col-sm-4">
+                <div class="contact_box">
+                    <div class="contact_icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="contact_info">
+                        <h5>Call Us</h5>
+                        <a href=""> 333-333-3333</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="contact_box">
+                    <div class="contact_icon">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="contact_info">
+                        <h5>Email</h5>
+                        <a href="">sales@techdiversityproject.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="contact_box">
+                    <div class="contact_icon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+
+                    <div class="contact_info">
+                        <h5>Address</h5>
+                        <span> 1050 Kelly Creek Circle Oviedo, FL 32765</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 text-center pt-4">
+            <div class="contact_info">
+                <div class="title mb-3">
+                    <h2>Contact With Us</h2>
+                </div>
+                <ul class="list-unstyled social_list">
+                    <li>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %} {% block inline_javascript %}
+<script>
+    ;(function () {
+        var script = document.createElement("script")
+        script.src = "https://paperform.co/__embed.min.js"
+        document.body.appendChild(script)
+    })()
+</script>
+
+{% endblock inline_javascript %}
