@@ -44,7 +44,7 @@
             <div class="col-sm-8 col-md-12 col-lg-8">
                 <div class="left_sec">
                     <h4>job Description</h4>
-                    <div>{{job.description}}</div>
+                    <div>{{job.full_job_description|safe}}</div>
 
                     <div class="other-options mt-5">
                         <div class="social-share">
@@ -117,7 +117,7 @@
                                     <i class="fa fa-usd mr-4"></i>
                                     <div class="media-body">
                                         <h5 class="mt-0">Salery Range:</h5>
-                                        ${{job.salary_min}} - ${{job.salary_max}}
+                                        {{job.salary_range}}
                                     </div>
                                 </div>
                             </li>
