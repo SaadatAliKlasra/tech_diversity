@@ -11,8 +11,8 @@ class ScholarshipListView(FilterView):
     model = Scholarship
     template_name = "pages/scholarship.html"
     filterset_class = ScholarshipFilter
-    paginate_by = 20
     queryset = Scholarship.objects.filter(active=True)
+    paginate_by = 10
 
 
 class ScholarshipDetailView(DetailView):
@@ -27,8 +27,8 @@ class JobListView(FilterView):
     model = Job
     template_name = "pages/job_search.html"
     filterset_class = JobFilter
-    paginate_by = 20
     queryset = Job.objects.filter(active=True)
+    paginate_by = 10
 
 
 class JobDetailView(DetailView):
