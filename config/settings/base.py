@@ -307,3 +307,6 @@ DATE_INPUT_FORMATS = [
     "%d %B %Y",  # '25 October 2006'
     "%d %B, %Y",  # '25 October, 2006'
 ]
+
+
+FILTERS_EMPTY_CHOICE_LABEL = "All"

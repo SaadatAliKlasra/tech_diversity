@@ -8,9 +8,16 @@ from core.main.models import Job, Scholarship
 class ScholarshipFilter(django_filters.FilterSet):
     deadline = django_filters.DateFilter(
         field_name="deadline",
-        lookup_expr="gte",
+        lookup_expr="lte",
         label="Deadline",
         widget=forms.DateInput(attrs={"type": "date"}),
+    )
+
+    amount = django_filters.CharFilter(
+        field_name="amount",
+        label="Amount",
+        lookup_expr="icontains",
+        widget=forms.TextInput(attrs={"placeholder": "$"}),
     )
 
     class Meta:
