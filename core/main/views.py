@@ -16,7 +16,7 @@ class ScholarshipListView(FilterView):
     template_name = "pages/scholarship.html"
     filterset_class = ScholarshipFilter
     queryset = Scholarship.objects.filter(active=True)
-    paginate_by = 1
+    paginate_by = 10
 
 
 class ScholarshipDetailView(DetailView):
