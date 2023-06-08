@@ -58,7 +58,6 @@ class Job(TitleSlugDescriptionModel):
     full_job_description = models.TextField(null=True, blank=True)
     hours = models.IntegerField(help_text="working hours per week", null=True, blank=True)
     apply_link = models.CharField(max_length=1000)
-    deadline = models.DateField(null=True, blank=True)
     posted = models.DateField(null=True, blank=True)
     active = models.BooleanField(default=True)
 

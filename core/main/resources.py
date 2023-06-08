@@ -101,6 +101,7 @@ class JobResource(resources.ModelResource):
             "company_name": "Company Name",
             "salary_range": "Salary Range",
             "posted": "Posted",
+            "expiration_date": "Expiration Date",
             "job_type": "Job Type",
             "location": "Location",
             "description": "Brief Job Description",
