@@ -26,6 +26,12 @@ class ScholarshipFilter(django_filters.FilterSet):
 
 
 class JobFilter(django_filters.FilterSet):
+    title = django_filters.CharFilter(
+        field_name="title",
+        label="Job Title",
+        lookup_expr="icontains",
+        widget=forms.TextInput(attrs={"placeholder": "Enter Title"}),
+    )
     location = django_filters.CharFilter(
         field_name="location",
         label="Location",
