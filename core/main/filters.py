@@ -1,5 +1,7 @@
 from django import forms
 
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Div, Field, HTML
 import django_filters
 
 from core.main.models import Job, Scholarship
@@ -17,12 +19,12 @@ class ScholarshipFilter(django_filters.FilterSet):
         field_name="amount",
         label="Amount",
         lookup_expr="icontains",
-        widget=forms.TextInput(attrs={"placeholder": "$"}),
+        widget=forms.TextInput(attrs={"placeholder": "Enter amount"}),
     )
 
     class Meta:
         model = Scholarship
-        fields = ["category", "amount", "deadline"]
+        fields = ("category", "amount", "deadline")
 
 
 class JobFilter(django_filters.FilterSet):

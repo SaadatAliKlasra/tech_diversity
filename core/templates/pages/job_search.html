@@ -91,6 +91,16 @@
                                 </div>
                             </div>
                         </div>
+                        {% empty %}
+                        <div class="col-sm-12">
+                          <div class="scholatship_block">
+                            <div class="row align-items-center">
+                              <div class="col-sm-12">
+                                <h3>No Job Found!</h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         {% endfor %}
                     </div>
                     {% include 'includes/pagination.html' %}
