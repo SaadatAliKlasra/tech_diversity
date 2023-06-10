@@ -1,3 +1,5 @@
+import re
+
 from django.core.exceptions import ObjectDoesNotExist
 
 from import_export import resources, fields
@@ -17,7 +19,7 @@ class ScholarshipResource(resources.ModelResource):
         import_id_fields = ["title"]
 
     def before_import_row(self, row, **kwargs):
-        category_name = row.get("Category")
+        category_name = row.get("category")
         if category_name:
             try:
                 category = ScholarshipCategory.objects.get(name=category_name)
@@ -25,6 +27,11 @@ class ScholarshipResource(resources.ModelResource):
             except ObjectDoesNotExist:
                 category = ScholarshipCategory.objects.create(name=category_name)
                 row["Category"] = category.pk
+
+        # Remove "$" and "," from the "amount" field
+        amount = row.get("amount")
+        if amount:
+            row["amount"] = re.sub(r"[$,]", "", amount)
 
     def before_import(self, dataset, using_transactions, dry_run, **kwargs):
         # Define a dictionary to map the new column names to the original ones
