@@ -18,7 +18,7 @@ class ScholarshipFilter(django_filters.FilterSet):
     amount = django_filters.CharFilter(
         field_name="amount",
         label="Amount",
-        lookup_expr="icontains",
+        lookup_expr="iexact",
         widget=forms.TextInput(attrs={"placeholder": "Enter amount"}),
     )
 
